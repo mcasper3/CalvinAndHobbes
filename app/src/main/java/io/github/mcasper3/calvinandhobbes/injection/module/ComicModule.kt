@@ -1,4 +1,4 @@
-package io.github.mcasper3.calvinandhobbes.injection
+package io.github.mcasper3.calvinandhobbes.injection.module
 
 import dagger.Module
 import dagger.Provides
@@ -8,7 +8,7 @@ import io.github.mcasper3.calvinandhobbes.data.comic.ComicDataSource
 import io.github.mcasper3.calvinandhobbes.ui.comic.ComicPresenter
 
 @Module
-class ActivityModule {
+class ComicModule {
     @Provides
     fun provideComicPresenter(comicDataSource: ComicDataSource): ComicPresenter {
         return ComicPresenter(comicDataSource, null)

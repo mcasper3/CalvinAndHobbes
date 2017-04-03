@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.percent.PercentFrameLayout
+<android.support.percent.PercentRelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="io.github.mcasper3.calvinandhobbes.ui.comic.ComicActivity">
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_above="@+id/comic_buttons"
         android:id="@+id/comic_view_pager" />
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/comic_buttons"
         android:gravity="center_vertical"
-        app:layout_marginBottomPercent="10%"
-        android:layout_gravity="center_horizontal|bottom">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
 
         <ImageView
             android:layout_width="64dp"
@@ -60,6 +61,4 @@
 
     </LinearLayout>
 
-
-
-</android.support.percent.PercentFrameLayout>
+</android.support.percent.PercentRelativeLayout>

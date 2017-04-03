@@ -1,4 +1,4 @@
-package io.github.mcasper3.calvinandhobbes.injection
+package io.github.mcasper3.calvinandhobbes.injection.module
 
 import android.app.Application
 import android.content.Context

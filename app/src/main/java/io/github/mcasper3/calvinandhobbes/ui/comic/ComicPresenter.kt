@@ -6,7 +6,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
 class ComicPresenter(val comicDataSource: ComicDataSource, private var comicView: ComicView?) {
-    fun setView(view: ComicView) {
+    fun setView(view: ComicView?) {
         comicView = view
     }
 
