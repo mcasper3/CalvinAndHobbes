@@ -1,7 +1,7 @@
 package io.github.mcasper3.calvinandhobbes.ui
 
 import android.app.Application
-import io.github.mcasper3.calvinandhobbes.injection.*
+import com.squareup.leakcanary.LeakCanary
 import io.github.mcasper3.calvinandhobbes.injection.component.ApplicationComponent
 import io.github.mcasper3.calvinandhobbes.injection.component.ComicComponent
 import io.github.mcasper3.calvinandhobbes.injection.component.DaggerApplicationComponent
@@ -15,6 +15,15 @@ class CalvinAndHobbesApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
+
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return
+        }
+
+        LeakCanary.install(this)
+
         applicationComponent = createApplicationComponent()
     }
 

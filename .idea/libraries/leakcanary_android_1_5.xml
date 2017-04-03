@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="leakcanary-android-1.5">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/ba9def76866c72edc5e573a7678998a128f58a3c/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/ba9def76866c72edc5e573a7678998a128f58a3c/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
